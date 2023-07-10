@@ -1,8 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
 
-
-url="https://codewithharry.com/"
+#Create By Atiar Rahaman
+url="https://mybangla24.com/"
 
 r=requests.get(url)
 req=r.content
@@ -15,8 +15,6 @@ all_link=set()
 
 for link in anchor:
     if link.get('href') !='#':
-        link_text="https://codewithharry.com/" +link.get('href')
+        link_text="https://mybangla24.com/" +link.get('href')
         all_link.add(link)
         print(link_text)
-
-
